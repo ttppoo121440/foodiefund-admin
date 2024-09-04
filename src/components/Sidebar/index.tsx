@@ -6,7 +6,7 @@ import {
   DollarOutlined,
   SoundOutlined,
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const { Sider } = Layout;
 
@@ -19,12 +19,12 @@ interface MenuItem {
 
 const items: MenuItem[] = [
   {
-    key: 'home',
+    key: '/',
     icon: <HomeOutlined />,
     label: <Link to="/">首頁</Link>,
   },
   {
-    key: 'profile',
+    key: '/profile',
     icon: <UserOutlined />,
     label: <Link to="/profile">會員管理</Link>,
     // children: [
@@ -39,26 +39,34 @@ const items: MenuItem[] = [
     // ],
   },
   {
-    key: 'raising-deals',
+    key: '/raising-deals',
     icon: <DollarOutlined />,
     label: <Link to="/raising-deals">募集交易管理</Link>,
   },
   {
-    key: 'announcement',
+    key: '/announcement',
     icon: <SoundOutlined />,
     label: <Link to="/announcement">公告活動管理</Link>,
   },
   {
-    key: 'settings',
+    key: '/settings',
     icon: <SettingOutlined />,
     label: <Link to="/settings">設定</Link>,
   },
 ];
 
 const Sidebar = () => {
+  const location = useLocation();
+  const selectedKey = location.pathname;
+
   return (
     <Sider>
-      <Menu theme="dark" mode="inline" items={items} />
+      <Menu
+        theme="dark"
+        mode="inline"
+        items={items}
+        selectedKeys={[selectedKey]}
+      />
     </Sider>
   );
 };

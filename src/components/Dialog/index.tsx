@@ -122,7 +122,7 @@ const Dialog = <T extends Record<string, unknown>>({
         open={dialogState.isOpen}
         onCancel={handleCancel}
         okButtonProps={{ disabled: !(isValid && isDirty) || isSubmitting }}
-        cancelButtonProps={{ disabled: !(isValid && isDirty) || isSubmitting }}
+        cancelButtonProps={{ disabled: isSubmitting }}
       >
         {modalContent}
       </Modal>
