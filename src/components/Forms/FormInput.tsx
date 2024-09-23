@@ -10,6 +10,8 @@ import { inputType } from './types';
 import FormSelect from './FormSelect';
 import FormRadio from './FormRadio';
 import FormDatePicker from './FormDatePicker';
+import FormTextArea from './FormTextArea';
+import FormSwitch from './FormSwitch';
 
 const FormInput = ({
   name = '',
@@ -46,6 +48,10 @@ const FormInput = ({
             label={label}
           />
         );
+      case 'textarea':
+        return <FormTextArea label={label} name={name} />;
+      case 'switch':
+        return <FormSwitch label={label} name={name} />;
       case 'date':
         return <FormDatePicker name={name} label={label} required={required} />;
       default:

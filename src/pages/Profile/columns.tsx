@@ -2,7 +2,7 @@ import { ColumnsType } from 'antd/es/table';
 import { Button, Space, Switch, Tag } from 'antd';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import Moment from 'moment';
-import { AccountResponseType } from '@/api/services/userService/type';
+import { AccountResponseType } from '@/api/services/userService/types';
 
 export const getColumns = (
   openDialogEditData: (data: AccountResponseType) => void,

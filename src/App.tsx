@@ -4,7 +4,7 @@ import Home from '@/pages/Home';
 import Profile from '@/pages/Profile';
 import Settings from '@/pages/Settings';
 import NotFound from '@/pages/NotFound';
-import BlockList from '@/pages/BlockList';
+import News from '@/pages/News';
 
 const App = () => {
   const basename =
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="blockList" element={<BlockList />} />
+          <Route path="news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

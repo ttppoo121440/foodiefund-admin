@@ -7,7 +7,7 @@ import {
   AccountQueryParams,
   AccountQueryResponse,
   AccountResponseType,
-} from './type';
+} from './types';
 
 export const getUsers = ({
   keyWord = '',

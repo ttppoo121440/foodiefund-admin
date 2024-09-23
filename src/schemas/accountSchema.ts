@@ -44,6 +44,7 @@ export const accountQueryParamsSchema = z.object({
 });
 
 export const accountQueryResponseSchema = z.object({
+  success: z.boolean(),
   data: z.array(accountResponseTypeSchema),
   message: z.string(),
   pagination: z.object({

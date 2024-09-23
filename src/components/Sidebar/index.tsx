@@ -44,9 +44,9 @@ const items: MenuItem[] = [
     label: <Link to="/raising-deals">募集交易管理</Link>,
   },
   {
-    key: '/announcement',
+    key: '/news',
     icon: <SoundOutlined />,
-    label: <Link to="/announcement">公告活動管理</Link>,
+    label: <Link to="/news">公告活動管理</Link>,
   },
   {
     key: '/settings',

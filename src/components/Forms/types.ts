@@ -11,7 +11,17 @@ export interface inputType {
   name?: string;
   label: string;
   required?: boolean;
-  type?: 'text' | 'email' | 'number' | 'password' | 'select' | 'radio' | 'date';
+  type?:
+    | 'text'
+    | 'email'
+    | 'number'
+    | 'password'
+    | 'select'
+    | 'radio'
+    | 'date'
+    | 'textarea'
+    | 'switch';
+
   options?: InputOption[];
   value?: string;
   onChange?: (value: string) => void;

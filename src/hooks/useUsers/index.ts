@@ -17,7 +17,7 @@ import {
   AccountQueryParams,
   AccountQueryResponse,
   AccountResponseType,
-} from '@/api/services/userService/type';
+} from '@/api/services/userService/types';
 import { accountQueryResponseSchema } from '@/schemas/accountSchema';
 
 export const useGetUsers = (queryParams: AccountQueryParams) => {

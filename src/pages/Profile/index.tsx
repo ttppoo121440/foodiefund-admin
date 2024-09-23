@@ -10,11 +10,11 @@ import { ShowDeleteConfirm } from '@/components/Dialog/ShowDeleteConfirm';
 import { useState } from 'react';
 import { useFetchUsers } from '@/hooks/useFetchLocalData';
 import RadioFilterComponent from './RadioFilterComponent';
-import { handleSwitch } from '@/utils/handleSwitch';
+import { handleSwitch } from '@/pages/Profile/handleSwitch';
 import {
   AccountBlackListResponseType,
   AccountResponseType,
-} from '@/api/services/userService/type';
+} from '@/api/services/userService/types';
 import {
   accountRegistrationSchema,
   accountResponseTypeSchema,

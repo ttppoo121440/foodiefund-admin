@@ -9,7 +9,7 @@ import {
   useUpdateUserMutation,
 } from '@/hooks/useUsers';
 import { DialogState } from '@/types/dialog';
-import { AccountResponseType } from '@/api/services/userService/type';
+import { AccountResponseType } from '@/api/services/userService/types';
 
 export const useData = () => {
   const { currentPage, pageSize, handlePageChange } = usePagination();

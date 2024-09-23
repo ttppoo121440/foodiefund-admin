@@ -1,7 +1,7 @@
 import {
   AccountBlackListResponseType,
   AccountResponseType,
-} from '@/api/services/userService/type';
+} from '@/api/services/userService/types';
 
 export const handleSwitch = (
   checked: boolean,
