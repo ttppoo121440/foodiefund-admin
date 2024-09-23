@@ -9,6 +9,6 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "jsxBracketSameLine": false,
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "overrides": [{ "files": ".prettierrc", "options": { "parser": "json" } }]
 }
