@@ -3,7 +3,11 @@ import { z } from 'zod';
 export const accountResponseTypeSchema = z.object({
   _id: z.string(),
   name: z.string().nonempty('姓名不能為空'),
-  email: z.string().nonempty('電子郵箱不能為空').email('電子郵箱格式錯誤'),
+  email: z.union([
+    z.string().email('電子郵箱格式錯誤'),
+    z.literal(''),
+    z.undefined(),
+  ]),
   phone: z
     .string()
     .optional()

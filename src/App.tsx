@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from '@/pages/Dashboard';
 import Home from '@/pages/Home';
 import Profile from '@/pages/Profile';
@@ -7,20 +7,18 @@ import NotFound from '@/pages/NotFound';
 import News from '@/pages/News';
 
 const App = () => {
-  const basename =
-    import.meta.env.MODE === 'production' ? '/foodiefund-admin' : '/';
   return (
-    <Router basename={basename}>
+    <HashRouter>
       <Dashboard>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="news" element={<News />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Dashboard>
-    </Router>
+    </HashRouter>
   );
 };
 

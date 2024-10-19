@@ -1,15 +1,19 @@
 import axiosClient from '@/api/axiosClient';
 
 import { AxiosResponse } from 'axios';
-import { AccountQueryParams, AccountQueryResponse } from '../userService/types';
-import { NewsIdResponseType, NewsResponseType } from './types';
+import {
+  NewsIdResponseType,
+  NewsQueryParams,
+  NewsQueryResponse,
+  NewsResponseType,
+} from './types';
 
 export const getNews = ({
   keyWord = '',
   page,
   limit = 10,
-}: AccountQueryParams) => {
-  return axiosClient.get<AccountQueryResponse>('/news', {
+}: NewsQueryParams) => {
+  return axiosClient.get<NewsQueryResponse>('/news', {
     params: { keyWord, page, limit },
   });
 };
